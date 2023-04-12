@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="MLuisa">
+    <meta name="Description" content="Página web de un jardín de infancia">
+    <meta name="Keywords"
+        content="html, lenguajes de marca, imagenes, favicon, listas, tablas, miños, jardin de infancia">
+    <!--Favicon-->
+    <link rel="icon" href="../multimedia/img/favicon.jpg" sizes="32x32">
+    <!--Estilos-->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/formulario.css">
+    <style>
+        body {
+            background-color: #17a2b8;
+        }
+
+        /*movil*/
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header'
+                'nav nav nav'
+                'main main main'
+                'main main main'
+                'main main main'
+                'footer footer footer';
+            gap: 10px;
+            padding: 10px;
+        }
+
+        @media only screen and (min-width:781px) {
+
+            /*escritorio*/
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'header header header header header header'
+                    'nav nav nav nav nav nav'
+                    'main main main main main main'
+                    'main main main main main main'
+                    'main main main main main main'
+                    'footer footer footer footer footer footer';
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .item1 {
+                grid-area: header;
+            }
+
+            .item2 {
+                grid-area: nav;
+            }
+
+            .item3 {
+                grid-area: main;
+            }
+
+            .item4 {
+                grid-area: footer;
+            }
+
+        }
+
+        @media only screen and (min-width:461px) and (max-width:780px) {
+
+            /*tablet*/
+
+            .grid-container {
+                display: grid;
+                grid-template-areas:
+                    'header header header header'
+                    'nav nav nav nav'
+                    'main main main main'
+                    'main main main main'
+                    'main main main main'
+                    'footer footer footer footer';
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .item1 {
+                grid-area: header;
+            }
+
+            .item2 {
+                grid-area: nav;
+            }
+
+            .item3 {
+                grid-area: main;
+            }
+
+            .item4 {
+                grid-area: footer;
+            }
+
+        }
+
+        .item1 {
+            grid-area: header;
+        }
+
+        .item2 {
+            grid-area: nav;
+        }
+
+        .item3 {
+            grid-area: main;
+        }
+
+        .item4 {
+            grid-area: footer;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <!-- Header -->
+        <div class="item1">
+            <div>
+                <div>
+                    <h4>Jardín de Infancia</h4>
+                    <h1>Otra forma de educar a tus hijos</h1>
+                    <img src="../multimedia/img/logoCompleto - header.jpg" alt="" style="width: 70%; height: auto;">
+                </div>
+            </div>
+        </div>
+        <!-- Header -->
+
+
+        <!-- Nav-->
+        <div class="item2">
+            <nav class="navbar">
+                <div>
+                    <div class="navbar-nav">
+                        <a href="../index.html" class="nav-item nav-link active" target="_blank">Inicio</a>
+                        <a href="./nosotros.html" class="nav-item nav-link" target="_blank">Nosotros</a>
+                        <a href="./clases.html" class="nav-item nav-link" target="_blank">Clases</a>
+                        <a href="./profes.html" class="nav-item nav-link" target="_blank">Profes</a>
+                        <a href="./galeria.html" class="nav-item nav-link" target="_blank">Galería</a>
+                        <a href="./contacto.html" class="nav-item nav-link" target="_blank">Contacto</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Nav-->
+
+        <!--Main-->
+        <div class="item3">
+            <main>
+                <div class="contact_form">
+
+                    <div class="formulario">
+                        <h2>Formulario de contacto</h2>
+                        <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+
+
+                        <form action="submeter-formulario.php" method="post">
+
+
+                            <p>
+                                <label for="nombre" class="colocar_nombre">Nombre
+                                    <span class="obligatorio">*</span>
+                                </label>
+                                <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
+                                    placeholder="Escribe tu nombre">
+
+                                <label for="apellido1" class="colocar_nombre">Pimer Apellido
+                                    <span class="obligatorio">*</span>
+                                </label>
+                                <input type="text" name="introducir_apellido1" id="apellido1" required="obligatorio"
+                                    placeholder="Escribe tu primer apellido">
+
+                                <label for="apellido2" class="colocar_nombre">Segundo Apellido
+                                    <span class="obligatorio">*</span>
+                                </label>
+                                <input type="text" name="introducir_apellido2" id="apellido2" required="obligatorio"
+                                    placeholder="Escribe tu segundo apellido">
+                            </p>
+                            <p>
+                                <label for="email" class="colocar_email">Email
+                                    <span class="obligatorio">*</span>
+                                </label>
+                                <input type="email" name="introducir_email" id="email" required="obligatorio"
+                                    placeholder="Escribe tu Email">
+                            </p>
+
+                            <p>
+                                <label for="telefone" class="colocar_telefono">Teléfono
+                                </label>
+                                <input type="tel" name="introducir_telefono" id="telefono"
+                                    placeholder="Escribe tu teléfono">
+                            </p>
+
+                            <p>
+                                <label for="asunto" class="colocar_asunto">Asunto
+                                    <span class="obligatorio">*</span>
+                                </label>
+                                <input type="text" name="introducir_asunto" id="assunto" required="obligatorio"
+                                    placeholder="Escribe un asunto">
+                            </p>
+
+                            <p>
+                                <label for="mensaje" class="colocar_mensaje">Mensaje
+                                    <span class="obligatorio">*</span>
+                                </label>
+                                <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje"
+                                    required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea>
+                            </p>
+
+                            <button type="submit" name="enviar_formulario" id="enviar">
+                                <p>Enviar</p>
+                            </button>
+
+                            <p class="aviso">
+                                <span class="obligatorio"> * </span>los campos son obligatorios.
+                            </p>
+
+                        </form>
+                    </div>
+                </div>
+
+
+            </main>
+        </div>
+        <!--Main-->
+
+        <!--Footer-->
+        <div class="item4">
+            <footer>
+                <div>
+                    <div class="cajagrandeFoo">
+                        <div class="caja1">
+                            <h3 class="encabezado1">Información de contacto</h3>
+                            <div>
+                                <p class="info"><span class="encabezado2">Dirección:</span> C/ Libertad, 30 06810
+                                    Calamonte
+                                    Badajoz
+
+                            </div>
+                            <div>
+                                <p class="info"><span class="encabezado2">Email:</span>
+                                    jardininfanciarincondemilo@gmail.com
+                            </div>
+                            <div>
+                                <p class="info"><span class="encabezado2">Teléfono:</span>+34 000 000 000
+
+                            </div>
+                        </div>
+                        <div class="cajaRedSocial">
+                            <h3 class="encabezado1">Redes Sociales</h3>
+                            <figure>
+                                <a href="https://www.facebook.com/rincondemilo/?locale=es_ES" target="_blank"><img
+                                        src="../multimedia/img/Facebook_icon.svg.png"
+                                        style="width: 1em; height: auto;"></a>
+
+                                <figcaption class="info">Facebook</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="caja2">
+
+                        <div>
+                            <a href="#" class="info">Inicio</a>
+                            <a href="#" class="info">Nosotros</a>
+                            <a href="#" class="info">Clases</a>
+                            <a href="#" class="info">Profes</a>
+                            <a href="#" class="info">Galería</a>
+                            <a href="#" class="info">Contacto</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="container-fluid" style="border-top: 1px solid rgba(23, 162, 184, .2);;">
+                    <p><a class="text-primary font-weight-bold" href="#">El Rincón de Milo</a>. All Rights
+                        Reserved.
+                    </p>
+                </div>
+
+            </footer>
+        </div>
+        <!--Footer-->
+
+
+
+    </div>
+</body>
+
+</html>
